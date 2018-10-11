@@ -5,7 +5,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <SnakeGrid/>
+          <SnakeGrid>
+          </SnakeGrid>
       </div>
     );
   }
