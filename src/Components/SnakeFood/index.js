@@ -25,13 +25,15 @@ export function foodMaker(fence,GAME_LEVEL,ctx){
         console.log("LOOPING");
     }
 
-    snakeFoodDraw(rndX,rndY,ctx)
-
+    // snakeFoodDraw(rndX,rndY,ctx)
+    console.log("in random cord function",rndX,rndY);
     return [rndX, rndY]
 }
 
 export function snakeFoodDraw(rndX,rndY,ctx) {
     // Changed Shape of Food
+    console.log("in snake you",rndX);
+    console.log(rndY);
     ctx.fillRect(rndX + 6,rndY,6,6);
     ctx.fillRect(rndX + 6,rndY + 12,6,6);
     ctx.fillRect(rndX,rndY + 6,6,6);

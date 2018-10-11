@@ -1,7 +1,7 @@
 
 
 import React from 'react'
-import { foodMaker } from '../SnakeFood';
+import { foodMaker,snakeFoodDraw } from '../SnakeFood';
 import Fences from '../Fences';
 import animate from '../DrawSnake'
 
@@ -10,6 +10,7 @@ export default class SnakeGrid extends React.Component{
 
     componentDidMount() {
         this.updateCanvas();
+        
     }
 
     updateCanvas() {
@@ -49,6 +50,8 @@ export default class SnakeGrid extends React.Component{
                         ctx.fillRect(fence[GAME_LEVEL][i].x,fence[GAME_LEVEL][i].y,19,19);
                     }
                     animate(ctx,foodCordinates.rndX,foodCordinates.rndY); 
+                    snakeFoodDraw(foodCordinates.rndX,foodCordinates.rndY,ctx);
+
                 },
                  150 );
     }
