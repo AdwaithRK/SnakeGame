@@ -129,8 +129,4 @@ export default class Fences{
         return fence
     }
 
-
-
-
-
-}
+} 

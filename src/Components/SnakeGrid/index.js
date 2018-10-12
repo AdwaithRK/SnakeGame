@@ -7,10 +7,19 @@ import animate from '../DrawSnake'
 
 export default class SnakeGrid extends React.Component{
 
+    constructor(){
+        this.state.GAME_LEVEL=1;
+    }
+
+    increment_level(){
+        var GAME_LEVEL=this.state.GAME_LEVEL;
+        GAME_LEVEL++;
+        this.state.GAME_LEVEL=GAME_LEVEL;
+    }
+
 
     componentDidMount() {
-        this.updateCanvas();
-        
+        this.updateCanvas();        
     }
 
     updateCanvas() {
@@ -49,8 +58,8 @@ export default class SnakeGrid extends React.Component{
                     for ( i =0;i<fence[GAME_LEVEL].length;i++){
                         ctx.fillRect(fence[GAME_LEVEL][i].x,fence[GAME_LEVEL][i].y,19,19);
                     }
-                    animate(ctx,foodCordinates.rndX,foodCordinates.rndY); 
-                    snakeFoodDraw(foodCordinates.rndX,foodCordinates.rndY,ctx);
+                    animate(ctx,foodCordinates[0],foodCordinates[1]); 
+                    snakeFoodDraw(foodCordinates[0],foodCordinates[1],ctx);
 
                 },
                  150 );

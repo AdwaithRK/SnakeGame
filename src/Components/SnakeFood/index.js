@@ -1,4 +1,4 @@
-export function foodMaker(fence,GAME_LEVEL,ctx){
+export function foodMaker(fence,GAME_LEVEL){
     var rndX = Math.round(Math.random() * 38)*20;
     var rndY = Math.round(Math.random() * 38)*20;
     console.log(rndX,rndY);
